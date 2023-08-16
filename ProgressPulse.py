@@ -2,7 +2,7 @@ import mysql.connector
 import tkinter as tk
 from tkinter import messagebox
 
-# Connect to the MySQL database
+# MySQL database
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -11,11 +11,9 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Create the main application window
 root = tk.Tk()
 root.title("ProgressPulse")
 
-# Define functions for database operations
 def add_workout():
     # Fetch data from the GUI fields
     user_id = user_id_var.get()
@@ -31,7 +29,7 @@ def add_workout():
     conn.commit()
     messagebox.showinfo("Success", "Workout added successfully!")
 
-# Create GUI components
+# GUI
 user_id_var = tk.StringVar()
 date_var = tk.StringVar()
 workout_type_var = tk.StringVar()
@@ -51,7 +49,7 @@ duration_entry = tk.Entry(root, textvariable=duration_var)
 
 add_button = tk.Button(root, text="Add Workout", command=add_workout)
 
-# Layout GUI components
+# Layout GUI
 user_id_label.pack()
 user_id_entry.pack()
 
@@ -66,8 +64,8 @@ duration_entry.pack()
 
 add_button.pack()
 
-# Start the GUI event loop
+# Start GUI event loop
 root.mainloop()
 
-# Close the database connection
+# Close db connection
 conn.close()
