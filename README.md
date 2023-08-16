@@ -22,7 +22,7 @@ ProgressPulse is a fitness-tracking application that allows users to log their w
 ## Installation
 
 1. Clone the repository:
-`git clone https://github.com/yourusername/ProgressPulse.git`
+`git clone https://github.com/imjbassi/ProgressPulse.git`
 
 2. Install required dependencies/libraries:
 All database elements were used using MySQL: https://www.mysql.com/downloads/
